@@ -88,13 +88,13 @@
 
 			// Inactive by default on <= large.
 				skel
-                    .on('+large', function() {
+          .on('+xsmall', function() {
 						$sidebar.addClass('inactive');
 					})
-					.on('-large !large', function() {
+					.on('-xsmall !xsmall', function() {
 						$sidebar.removeClass('inactive');
 					});
-      
+
 			// Hack: Workaround for Chrome/Android scrollbar position bug.
 				if (skel.vars.os == 'android'
 				&&	skel.vars.browser == 'chrome')
