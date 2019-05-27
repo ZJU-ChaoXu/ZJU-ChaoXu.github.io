@@ -83,18 +83,18 @@
 
 					});
 
-		// Sidebar.
+					// Sidebar.
 			var $sidebar = $('#sidebar'),
-				$sidebar_inner = $sidebar.children('.inner');
+			$sidebar_inner = $sidebar.children('.inner');
 
-			// Inactive by default on <= large.
-				skel
-          .on('+mini', function() {
-						$sidebar.removeClass('inactive');
-					})
-					.on('-mini !mini', function() {
-						$sidebar.addClass('inactive');
-					});
+			  // Inactive by default on <= large.
+			  skel
+			  .on('+mini', function() {
+			    $sidebar.addClass('inactive');
+			  })
+			  .on('-mini !mini', function() {
+			    $sidebar.removeClass('inactive');
+			  });
 
 			// Hack: Workaround for Chrome/Android scrollbar position bug.
 				if (skel.vars.os == 'android'
