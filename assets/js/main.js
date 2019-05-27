@@ -173,7 +173,7 @@
 					$body.on('click touchend', function(event) {
 
 						// >large? Bail.
-							if (!skel.breakpoint('huge').active)
+							if (!skel.breakpoint('large').active)
 								return;
 
 						// Deactivate.
@@ -203,7 +203,7 @@
 									return;
 
 							// <=large? Bail.
-								if (skel.breakpoint('huge').active) {
+								if (skel.breakpoint('large').active) {
 
 									$sidebar_inner
 										.data('locked', 0)
