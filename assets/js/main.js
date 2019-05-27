@@ -160,7 +160,7 @@
 					$sidebar.on('click touchend touchstart touchmove', function(event) {
 
 						// >large? Bail.
-							if (!skel.breakpoint('large').active)
+							if (!skel.breakpoint('xlarge').active)
 								return;
 
 						// Prevent propagation.
@@ -172,7 +172,7 @@
 					$body.on('click touchend', function(event) {
 
 						// >large? Bail.
-							if (!skel.breakpoint('large').active)
+							if (!skel.breakpoint('xlarge').active)
 								return;
 
 						// Deactivate.
@@ -202,7 +202,7 @@
 									return;
 
 							// <=large? Bail.
-								if (skel.breakpoint('large').active) {
+								if (skel.breakpoint('xlarge').active) {
 
 									$sidebar_inner
 										.data('locked', 0)
