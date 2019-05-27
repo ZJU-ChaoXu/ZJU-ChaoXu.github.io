@@ -7,6 +7,7 @@
 (function($) {
 
 	skel.breakpoints({
+		huge: '(max-width: 50000px)',
 		xlarge: '(max-width: 1680px)',
 		large: '(max-width: 1280px)',
 		medium: '(max-width: 980px)',
@@ -88,10 +89,10 @@
 
 			// Inactive by default on <= large.
 				skel
-          .on('+xlarge', function() {
+          .on('+huge', function() {
 						$sidebar.addClass('inactive');
 					})
-					.on('-xlarge !xlarge', function() {
+					.on('-huge !huge', function() {
 						$sidebar.removeClass('inactive');
 					});
 
@@ -125,7 +126,7 @@
 					$sidebar.on('click','a', function(event) {
 
 						// >large? Bail.
-							if (!skel.breakpoint('xlarge').active)
+							if (!skel.breakpoint('huge').active)
 								return;
 
 						// Vars.
@@ -160,7 +161,7 @@
 					$sidebar.on('click touchend touchstart touchmove', function(event) {
 
 						// >large? Bail.
-							if (!skel.breakpoint('xlarge').active)
+							if (!skel.breakpoint('huge').active)
 								return;
 
 						// Prevent propagation.
@@ -172,7 +173,7 @@
 					$body.on('click touchend', function(event) {
 
 						// >large? Bail.
-							if (!skel.breakpoint('xlarge').active)
+							if (!skel.breakpoint('huge').active)
 								return;
 
 						// Deactivate.
@@ -202,7 +203,7 @@
 									return;
 
 							// <=large? Bail.
-								if (skel.breakpoint('xlarge').active) {
+								if (skel.breakpoint('huge').active) {
 
 									$sidebar_inner
 										.data('locked', 0)
