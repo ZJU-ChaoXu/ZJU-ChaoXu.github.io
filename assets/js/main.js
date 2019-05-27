@@ -88,10 +88,10 @@
 
 			// Inactive by default on <= large.
 				skel
-                    .on('+xsmall', function() {
+          .on('+xlarge', function() {
 						$sidebar.addClass('inactive');
 					})
-					.on('-xsmall !xsmall', function() {
+					.on('-xlarge !xlarge', function() {
 						$sidebar.removeClass('inactive');
 					});
 
