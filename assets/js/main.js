@@ -88,11 +88,11 @@
 
 			// Inactive by default on <= large.
 				skel
-				breakpoints.on('<=large', function() {
+				.on('<=large', function() {
 				    $sidebar.removeClass('inactive');
 				});
 
-				breakpoints.on('>large', function() {
+				.on('>large', function() {
 				    $sidebar.addClass('inactive');
 				});
 			// Hack: Workaround for Chrome/Android scrollbar position bug.
