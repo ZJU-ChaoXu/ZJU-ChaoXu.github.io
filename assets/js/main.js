@@ -12,6 +12,7 @@
 		medium: '(max-width: 980px)',
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)',
+		mini: '(max-width: 10px)'
 		'xlarge-to-max': '(min-width: 1681px)',
 		'small-to-xlarge': '(min-width: 481px) and (max-width: 1680px)'
 	});
@@ -88,10 +89,10 @@
 
 			// Inactive by default on <= large.
 				skel
-          .on('+xsmall', function() {
+          .on('+mini', function() {
 						$sidebar.removeClass('inactive');
 					})
-					.on('-xsmall !xsmall', function() {
+					.on('-mini !mini', function() {
 						$sidebar.addClass('inactive');
 					});
 
